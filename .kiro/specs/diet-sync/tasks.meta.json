@@ -1,0 +1,1069 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Initialise a Vite + React + TypeScript project at the workspace root": [
+      {
+        "executionId": "882e7546-1ce3-470e-aad0-91faed9bf0a6",
+        "chatSessionId": "sess_670e630a-ef0e-4ffc-9f99-159541ee71fa",
+        "timestamp": 1792310364132
+      },
+      {
+        "executionId": "882e7546-1ce3-470e-aad0-91faed9bf0a6",
+        "chatSessionId": "sess_670e630a-ef0e-4ffc-9f99-159541ee71fa",
+        "timestamp": 1792310435921
+      }
+    ],
+    "1.2 Install and configure Tailwind CSS": [
+      {
+        "executionId": "e52d0619-0237-4668-9546-76bd74c72913",
+        "chatSessionId": "sess_670e630a-ef0e-4ffc-9f99-159541ee71fa",
+        "timestamp": 1792310660291
+      },
+      {
+        "executionId": "5ac9aa77-5b97-45e1-ba14-1c124e0541a5",
+        "chatSessionId": "sess_1644d546-d2e0-4f93-8436-aa95b5ee2d31",
+        "timestamp": 1792328515989
+      },
+      {
+        "executionId": "5ac9aa77-5b97-45e1-ba14-1c124e0541a5",
+        "chatSessionId": "sess_1644d546-d2e0-4f93-8436-aa95b5ee2d31",
+        "timestamp": 1792328670295
+      }
+    ],
+    "1.3 Install Zustand, Recharts, and Zod": [
+      {
+        "executionId": "b4189c64-d694-47d9-863e-c1613989808b",
+        "chatSessionId": "sess_3445c88d-ede1-441d-94e1-233cc640924c",
+        "timestamp": 1792328710745
+      }
+    ],
+    "1.4 Install and configure vite-plugin-pwa": [
+      {
+        "executionId": "95c17d28-7888-43e6-8384-dd48d490d40a",
+        "chatSessionId": "sess_1423bfc9-ad91-4e7d-b53c-f85f5dc5f65e",
+        "timestamp": 1792328831976
+      },
+      {
+        "executionId": "95c17d28-7888-43e6-8384-dd48d490d40a",
+        "chatSessionId": "sess_1423bfc9-ad91-4e7d-b53c-f85f5dc5f65e",
+        "timestamp": 1792328978684
+      }
+    ],
+    "1.5 Install Vitest and fast-check": [
+      {
+        "executionId": "d1472858-95dc-4d2a-b91b-d045363eb03b",
+        "chatSessionId": "sess_bc8bf99c-6280-4890-95d7-e407454fb7b9",
+        "timestamp": 1792329097372
+      },
+      {
+        "executionId": "d1472858-95dc-4d2a-b91b-d045363eb03b",
+        "chatSessionId": "sess_bc8bf99c-6280-4890-95d7-e407454fb7b9",
+        "timestamp": 1792329199100
+      }
+    ],
+    "1.6 Create the base directory structure": [
+      {
+        "executionId": "7b0dc81c-34a1-4177-935c-f9ec5987ea3c",
+        "chatSessionId": "sess_2e19a160-aa19-4af2-9b17-ba97453a58b6",
+        "timestamp": 1792329215361
+      },
+      {
+        "executionId": "7b0dc81c-34a1-4177-935c-f9ec5987ea3c",
+        "chatSessionId": "sess_2e19a160-aa19-4af2-9b17-ba97453a58b6",
+        "timestamp": 1792329270964
+      }
+    ],
+    "2.1 Create `src/types/index.ts` with all shared types": [
+      {
+        "executionId": "2059f2ad-79bb-4237-a4ab-e0bd32e8d737",
+        "chatSessionId": "sess_87aeaa38-3822-44f6-91f6-e52abc955a15",
+        "timestamp": 1792329359185
+      },
+      {
+        "executionId": "2059f2ad-79bb-4237-a4ab-e0bd32e8d737",
+        "chatSessionId": "sess_87aeaa38-3822-44f6-91f6-e52abc955a15",
+        "timestamp": 1792329441067
+      }
+    ],
+    "2.2 Define `STORAGE_KEYS` constants object": [
+      {
+        "executionId": "2059f2ad-79bb-4237-a4ab-e0bd32e8d737",
+        "chatSessionId": "sess_87aeaa38-3822-44f6-91f6-e52abc955a15",
+        "timestamp": 1792329444291
+      },
+      {
+        "executionId": "2059f2ad-79bb-4237-a4ab-e0bd32e8d737",
+        "chatSessionId": "sess_87aeaa38-3822-44f6-91f6-e52abc955a15",
+        "timestamp": 1792329482505
+      }
+    ],
+    "2.3 Create `src/data/foods.json` with seed data": [
+      {
+        "executionId": "2059f2ad-79bb-4237-a4ab-e0bd32e8d737",
+        "chatSessionId": "sess_87aeaa38-3822-44f6-91f6-e52abc955a15",
+        "timestamp": 1792329485866
+      },
+      {
+        "executionId": "b8425eb9-939a-485d-9758-3c40a47ad8ad",
+        "chatSessionId": "sess_bc4b989e-fc96-457f-b339-666e559a7d97",
+        "timestamp": 1792330418495
+      },
+      {
+        "executionId": "b8425eb9-939a-485d-9758-3c40a47ad8ad",
+        "chatSessionId": "sess_bc4b989e-fc96-457f-b339-666e559a7d97",
+        "timestamp": 1792335938945
+      }
+    ],
+    "2. Define TypeScript types and data models": [
+      {
+        "executionId": "b8425eb9-939a-485d-9758-3c40a47ad8ad",
+        "chatSessionId": "sess_bc4b989e-fc96-457f-b339-666e559a7d97",
+        "timestamp": 1792335939173
+      }
+    ],
+    "3.1 Create `src/repositories/StorageRepository.ts`": [
+      {
+        "executionId": "402c17d2-39bf-4f88-8f54-571ac2450ce6",
+        "chatSessionId": "sess_bce1321f-03de-45ab-a70c-48ee9c9f0c09",
+        "timestamp": 1792335983271
+      },
+      {
+        "executionId": "402c17d2-39bf-4f88-8f54-571ac2450ce6",
+        "chatSessionId": "sess_bce1321f-03de-45ab-a70c-48ee9c9f0c09",
+        "timestamp": 1792336089712
+      }
+    ],
+    "3.2 Write property-based tests for `StorageRepository`": [
+      {
+        "executionId": "402c17d2-39bf-4f88-8f54-571ac2450ce6",
+        "chatSessionId": "sess_bce1321f-03de-45ab-a70c-48ee9c9f0c09",
+        "timestamp": 1792336093072
+      },
+      {
+        "executionId": "402c17d2-39bf-4f88-8f54-571ac2450ce6",
+        "chatSessionId": "sess_bce1321f-03de-45ab-a70c-48ee9c9f0c09",
+        "timestamp": 1792336293636
+      }
+    ],
+    "3. Implement `StorageRepository`": [
+      {
+        "executionId": "402c17d2-39bf-4f88-8f54-571ac2450ce6",
+        "chatSessionId": "sess_bce1321f-03de-45ab-a70c-48ee9c9f0c09",
+        "timestamp": 1792336293780
+      }
+    ],
+    "4.1 Create `src/repositories/IFoodRepository.ts`": [
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792336348165
+      },
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792336420029
+      }
+    ],
+    "4.2 Create `src/repositories/LocalFoodRepository.ts`": [
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792336423264
+      },
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792336976951
+      }
+    ],
+    "4.3 Write property-based tests for `LocalFoodRepository`": [
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792336980125
+      },
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792337096066
+      }
+    ],
+    "4. Implement `IFoodRepository` and `LocalFoodRepository`": [
+      {
+        "executionId": "04ad8461-9621-4ea0-bb38-e88c9b474dfd",
+        "chatSessionId": "sess_8745b794-1fd3-4cd9-9f4e-ab21f4e1c3f3",
+        "timestamp": 1792337096198
+      }
+    ],
+    "5.1 Create `src/services/NutritionCalculator.ts` with all pure functions": [
+      {
+        "executionId": "55e23c87-1b84-438b-9886-c56fe1a93b20",
+        "chatSessionId": "sess_176954cb-0b13-4460-bab6-9d52fe65ff25",
+        "timestamp": 1792337144599
+      },
+      {
+        "executionId": "55e23c87-1b84-438b-9886-c56fe1a93b20",
+        "chatSessionId": "sess_176954cb-0b13-4460-bab6-9d52fe65ff25",
+        "timestamp": 1792337263397
+      }
+    ],
+    "5.2 Write property-based tests for `NutritionCalculator`": [
+      {
+        "executionId": "55e23c87-1b84-438b-9886-c56fe1a93b20",
+        "chatSessionId": "sess_176954cb-0b13-4460-bab6-9d52fe65ff25",
+        "timestamp": 1792337266769
+      },
+      {
+        "executionId": "b2d14452-c755-4939-8b35-86dc079e8044",
+        "chatSessionId": "sess_be2d359f-e65b-40f4-918a-d05d7b5f1592",
+        "timestamp": 1792339317947
+      }
+    ],
+    "6.1 Create `src/services/AuthService.ts`": [
+      {
+        "executionId": "d29deb51-a33f-496c-b8aa-5987e9ae9b65",
+        "chatSessionId": "sess_1f3395ff-1c46-4df5-a84b-dbccc18df991",
+        "timestamp": 1792340254194
+      },
+      {
+        "executionId": "d29deb51-a33f-496c-b8aa-5987e9ae9b65",
+        "chatSessionId": "sess_1f3395ff-1c46-4df5-a84b-dbccc18df991",
+        "timestamp": 1792341636960
+      }
+    ],
+    "6.2 Write property-based tests for `AuthService`": [
+      {
+        "executionId": "d29deb51-a33f-496c-b8aa-5987e9ae9b65",
+        "chatSessionId": "sess_1f3395ff-1c46-4df5-a84b-dbccc18df991",
+        "timestamp": 1792341640767
+      },
+      {
+        "executionId": "d29deb51-a33f-496c-b8aa-5987e9ae9b65",
+        "chatSessionId": "sess_1f3395ff-1c46-4df5-a84b-dbccc18df991",
+        "timestamp": 1792342518385
+      },
+      {
+        "executionId": "4fd78283-fc26-4390-b7f9-edd75af5f7f6",
+        "chatSessionId": "sess_b7d1895a-86b7-457b-8c32-b6f10f79a15c",
+        "timestamp": 1792342530288
+      },
+      {
+        "executionId": "4fd78283-fc26-4390-b7f9-edd75af5f7f6",
+        "chatSessionId": "sess_b7d1895a-86b7-457b-8c32-b6f10f79a15c",
+        "timestamp": 1792342877334
+      }
+    ],
+    "6. Implement `AuthService`": [
+      {
+        "executionId": "d29deb51-a33f-496c-b8aa-5987e9ae9b65",
+        "chatSessionId": "sess_1f3395ff-1c46-4df5-a84b-dbccc18df991",
+        "timestamp": 1792342518600
+      }
+    ],
+    "7.1 Create `src/services/FoodLogService.ts`": [
+      {
+        "executionId": "24d34bcb-511e-47f1-9f63-fa0ea9418d52",
+        "chatSessionId": "sess_119c2566-516e-42e7-a388-1c8e946f85ef",
+        "timestamp": 1792342898837
+      },
+      {
+        "executionId": "24d34bcb-511e-47f1-9f63-fa0ea9418d52",
+        "chatSessionId": "sess_119c2566-516e-42e7-a388-1c8e946f85ef",
+        "timestamp": 1792344958000
+      }
+    ],
+    "7.2 Create validation helpers in `src/services/FoodLogService.ts`": [
+      {
+        "executionId": "24d34bcb-511e-47f1-9f63-fa0ea9418d52",
+        "chatSessionId": "sess_119c2566-516e-42e7-a388-1c8e946f85ef",
+        "timestamp": 1792344963126
+      },
+      {
+        "executionId": "24d34bcb-511e-47f1-9f63-fa0ea9418d52",
+        "chatSessionId": "sess_119c2566-516e-42e7-a388-1c8e946f85ef",
+        "timestamp": 1792345576975
+      }
+    ],
+    "7. Implement `FoodLogService` and validation layer": [
+      {
+        "executionId": "24d34bcb-511e-47f1-9f63-fa0ea9418d52",
+        "chatSessionId": "sess_119c2566-516e-42e7-a388-1c8e946f85ef",
+        "timestamp": 1792345578073
+      }
+    ],
+    "8.1 Create `src/services/ProgressService.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345600226
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345624501
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792346814453
+      }
+    ],
+    "8.2 Create `src/services/ExportService.ts` *(S1 — optional)*": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345601672
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792346828447
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792347427170
+      }
+    ],
+    "9.1 Create `src/stores/authStore.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345602477
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792347439064
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792347764683
+      }
+    ],
+    "9.2 Create `src/stores/logStore.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345603746
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792347777304
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792348753364
+      }
+    ],
+    "9.3 Create `src/stores/foodStore.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345604863
+      },
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792348772842
+      },
+      {
+        "executionId": "f303e260-cc1b-44fd-af03-8c614437d5de",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792426397912
+      },
+      {
+        "executionId": "f303e260-cc1b-44fd-af03-8c614437d5de",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792426933516
+      }
+    ],
+    "9.4 Create `src/stores/progressStore.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345605490
+      },
+      {
+        "executionId": "42528782-9355-45b9-b7e1-1f8379fdbf68",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792427031248
+      },
+      {
+        "executionId": "e467f6cb-ebc5-49e6-9e3e-fc69a8967c8e",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792427349484
+      },
+      {
+        "executionId": "e467f6cb-ebc5-49e6-9e3e-fc69a8967c8e",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792428892049
+      }
+    ],
+    "10.1 Create `src/pages/Login.tsx`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345606426
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792430973786
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792431048464
+      }
+    ],
+    "10.2 Create `src/pages/Onboarding.tsx`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607170
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792431051963
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792431134603
+      }
+    ],
+    "10.3 Write unit tests for Onboarding and Login": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607341
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792431137889
+      },
+      {
+        "executionId": "628951cf-dcad-4a49-9d05-2f59e788ccc5",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792431642620
+      }
+    ],
+    "11.1 Create `src/pages/Dashboard.tsx` and components in `src/components/dashboard/`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607481
+      },
+      {
+        "executionId": "b709493b-a86d-4dc4-ba91-bd92a9f47281",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792431675419
+      },
+      {
+        "executionId": "b709493b-a86d-4dc4-ba91-bd92a9f47281",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792432512039
+      }
+    ],
+    "11.2 Write unit tests for Dashboard": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607630
+      },
+      {
+        "executionId": "aec08223-c3ad-4175-9dac-15206605b997",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792432539805
+      },
+      {
+        "executionId": "aec08223-c3ad-4175-9dac-15206605b997",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792433020318
+      }
+    ],
+    "12.1 Create `src/pages/Log.tsx` and components in `src/components/food-log/`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607776
+      },
+      {
+        "executionId": "d2795dd7-d07c-4f5b-96c0-5543f8b72d23",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792433037683
+      }
+    ],
+    "12.2 Write unit tests for Food Search Modal and Log page": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345607900
+      }
+    ],
+    "13.1 Create `src/pages/Progress.tsx` and components in `src/components/progress/`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608118
+      },
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438417563
+      },
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438853894
+      }
+    ],
+    "13.2 Write unit tests for Progress page": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608261
+      },
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438857114
+      },
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438912355
+      }
+    ],
+    "14.1 Create `src/pages/Settings.tsx` and components in `src/components/settings/`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608427
+      },
+      {
+        "executionId": "0da4c4cb-a0ce-4b25-9217-936a82b077f1",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792438931277
+      },
+      {
+        "executionId": "0da4c4cb-a0ce-4b25-9217-936a82b077f1",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792439166697
+      }
+    ],
+    "14.2 Write unit tests for Settings page": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608565
+      },
+      {
+        "executionId": "8e2f3a11-3362-48c4-bea8-75be8e59b24b",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792439188197
+      },
+      {
+        "executionId": "8e2f3a11-3362-48c4-bea8-75be8e59b24b",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792473028813
+      }
+    ],
+    "15.1 Install and configure React Router": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608744
+      },
+      {
+        "executionId": "515441b5-15e9-4f6d-b3a1-c34f13931e4e",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792473053156
+      },
+      {
+        "executionId": "515441b5-15e9-4f6d-b3a1-c34f13931e4e",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792473307343
+      }
+    ],
+    "15.2 Update `src/App.tsx` with router and layout": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345608905
+      },
+      {
+        "executionId": "5cdd6a27-f19b-47b9-a905-8b6388afd8ab",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792473326499
+      },
+      {
+        "executionId": "5cdd6a27-f19b-47b9-a905-8b6388afd8ab",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792473568366
+      }
+    ],
+    "16.1 Create / update `public/manifest.webmanifest`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609042
+      },
+      {
+        "executionId": "955984cf-2c11-4562-b870-eaaa4e0581b4",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792473587162
+      },
+      {
+        "executionId": "955984cf-2c11-4562-b870-eaaa4e0581b4",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792475499937
+      }
+    ],
+    "16.2 Finalise `vite-plugin-pwa` configuration": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609197
+      },
+      {
+        "executionId": "17c5f2a2-aa63-46e9-999c-4ef4229c9ba4",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792475620544
+      },
+      {
+        "executionId": "17c5f2a2-aa63-46e9-999c-4ef4229c9ba4",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792475970430
+      }
+    ],
+    "16.3 Write unit tests for manifest and service worker": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609360
+      },
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792475987855
+      },
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476165342
+      }
+    ],
+    "17.1 Write unit tests for `foods.json`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609509
+      },
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476169414
+      },
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476297162
+      }
+    ],
+    "18.1 Write `integration.onboarding.test.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609662
+      },
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476304916
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792476842138
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792476924729
+      }
+    ],
+    "18.2 Write `integration.auth.test.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609806
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792476928620
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792477064110
+      }
+    ],
+    "18.3 Write `integration.foodlog.test.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345609969
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792477067651
+      },
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792477499663
+      }
+    ],
+    "19.1 Implement `ExportService` (see task 8.2)": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610249
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792477573510
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478210646
+      }
+    ],
+    "19.2 Add Export button to Progress page": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610378
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478214262
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478350730
+      }
+    ],
+    "19.3 Write unit tests for `ExportService`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610496
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478354353
+      },
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478394669
+      }
+    ],
+    "20.1 Create `src/services/WaterService.ts`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610616
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792478608360
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792478734357
+      }
+    ],
+    "20.2 Add water tracking UI to Dashboard or dedicated section": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610745
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792478739160
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792479035230
+      }
+    ],
+    "20.3 Write property-based tests for `WaterService`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610874
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792479038987
+      },
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792479147018
+      }
+    ],
+    "21.1 Implement recent foods logic in `FoodLogService`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345610994
+      },
+      {
+        "executionId": "893edec2-dd40-459e-8bbf-a481fd7dc001",
+        "chatSessionId": "sess_fa60c244-9477-4357-a928-00d8d50b3da1",
+        "timestamp": 1792479205222
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792479757712
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792479878424
+      },
+      {
+        "executionId": "f00c40ae-2ccd-4812-8c30-1b859ed2e2a3",
+        "chatSessionId": "sess_ff77eeb3-4306-4728-ad6e-0d290c0755fb",
+        "timestamp": 1792480416076
+      },
+      {
+        "executionId": "f00c40ae-2ccd-4812-8c30-1b859ed2e2a3",
+        "chatSessionId": "sess_ff77eeb3-4306-4728-ad6e-0d290c0755fb",
+        "timestamp": 1792480537327
+      }
+    ],
+    "21.2 Display recent foods section in Food Search Modal": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345611110
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792479881825
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792480255682
+      }
+    ],
+    "21.3 Write property-based tests for recent foods": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345611228
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792480259636
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792480404918
+      }
+    ],
+    "22.1 Implement copy-yesterday in `FoodLogService`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345611344
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792480587122
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481242312
+      }
+    ],
+    "22.2 Add Copy Yesterday button to Log page": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345611474
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481245682
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481396641
+      }
+    ],
+    "22.3 Write property-based tests for copy-yesterday": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792345611595
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481400194
+      },
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481557646
+      }
+    ],
+    "8. Implement `ProgressService` and `ExportService`": [
+      {
+        "executionId": "4cfd9ccb-1c59-4eb7-8735-b5dcfdf908bb",
+        "chatSessionId": "sess_85f1ae23-e1e0-46e5-b4fb-c3080e890fbc",
+        "timestamp": 1792347427336
+      }
+    ],
+    "9. Implement Zustand stores": [
+      {
+        "executionId": "e467f6cb-ebc5-49e6-9e3e-fc69a8967c8e",
+        "chatSessionId": "sess_c515757f-80d7-49ed-8198-33b2bbd024f0",
+        "timestamp": 1792428892803
+      }
+    ],
+    "10. Implement Login and Onboarding pages": [
+      {
+        "executionId": "60478ed0-e5ab-4265-a6d9-5fc8b1b3ecba",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792429462867
+      },
+      {
+        "executionId": "60478ed0-e5ab-4265-a6d9-5fc8b1b3ecba",
+        "chatSessionId": "sess_133002eb-4317-4e82-b505-d0bc332d6acc",
+        "timestamp": 1792430944126
+      }
+    ],
+    "11. Implement Dashboard page": [
+      {
+        "executionId": "aec08223-c3ad-4175-9dac-15206605b997",
+        "chatSessionId": "sess_14c70558-30ad-4b6c-b530-62ad41dcfdb3",
+        "timestamp": 1792433020528
+      }
+    ],
+    "13. Implement Progress page": [
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438414228
+      },
+      {
+        "executionId": "6f1b31f9-bf0f-43ff-8753-7e07c7bfd18f",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792438912504
+      }
+    ],
+    "14. Implement Settings page": [
+      {
+        "executionId": "8e2f3a11-3362-48c4-bea8-75be8e59b24b",
+        "chatSessionId": "sess_b3f66e77-90e4-4770-a6ba-18509c7057a2",
+        "timestamp": 1792473028928
+      }
+    ],
+    "15. Configure routing and App shell": [
+      {
+        "executionId": "5cdd6a27-f19b-47b9-a905-8b6388afd8ab",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792473568510
+      }
+    ],
+    "16. Configure PWA manifest and service worker": [
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476165678
+      }
+    ],
+    "17. Validate `foods.json` and data integrity": [
+      {
+        "executionId": "ade8f90e-6b44-48a8-9bc3-b26f810b8de2",
+        "chatSessionId": "sess_e9dc32ff-6b76-4007-a275-664413959a44",
+        "timestamp": 1792476297360
+      }
+    ],
+    "18. Integration tests": [
+      {
+        "executionId": "21840a02-4eb9-49b0-9530-24355f82dfa6",
+        "chatSessionId": "sess_c8cfcbab-338c-43bd-a97c-cbbe47097d79",
+        "timestamp": 1792477500432
+      }
+    ],
+    "19. Stretch S1 — Progress Export Card *(optional)*": [
+      {
+        "executionId": "e5f05915-e2f2-411f-b42e-6b6c4dd45c36",
+        "chatSessionId": "sess_ed05b46e-9a32-491a-b712-be57c1ffd851",
+        "timestamp": 1792478394833
+      }
+    ],
+    "20. Stretch S2 — Water Tracking *(optional)*": [
+      {
+        "executionId": "8f175f23-75e2-416e-9a7b-39f6443f64d9",
+        "chatSessionId": "sess_6f0fca8b-2cdf-4e55-a28b-d1711ef6438c",
+        "timestamp": 1792479147152
+      }
+    ],
+    "21. Stretch S3 — Recent Foods *(optional)*": [
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792479754413
+      },
+      {
+        "executionId": "a8e5a79d-edef-48df-9b5d-414e9f9d5266",
+        "chatSessionId": "sess_d539f41e-0933-4ca4-a7e0-d0162d40f55b",
+        "timestamp": 1792480405128
+      }
+    ],
+    "22. Stretch S4 — Copy Yesterday *(optional)*": [
+      {
+        "executionId": "a9cb6b7e-18b2-4133-8afc-64e9e76b484a",
+        "chatSessionId": "sess_6e7b996b-1730-4f61-91f8-1c7cbc4fc409",
+        "timestamp": 1792481557794
+      }
+    ]
+  }
+}
