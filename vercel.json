@@ -1,0 +1,4 @@
+cd /d/Demoapp_kiro
+git add vercel.json
+git commit -m "Fix SPA routing for Vercel"
+git push
