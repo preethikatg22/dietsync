@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "aws-server": "node aws-server.js",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
@@ -13,7 +14,12 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1161.0",
+    "@aws-sdk/client-s3": "^3.1161.0",
     "@testing-library/user-event": "14.6.8",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "7.18.4",

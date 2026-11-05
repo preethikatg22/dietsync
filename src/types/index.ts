@@ -118,6 +118,12 @@ export interface AuthRecord {
   /** Hex string */
   salt: string;
   userId: string;
+  /** Security question text */
+  securityQuestion?: string;
+  /** PBKDF2 hash of the lowercased security answer */
+  securityAnswerHash?: string;
+  /** Salt used for hashing the security answer */
+  securityAnswerSalt?: string;
 }
 
 // ── Progress and stats ────────────────────────────────────────────────────────
@@ -174,6 +180,10 @@ export interface OnboardingData {
   activityLevel: ActivityLevel;
   goal: Goal;
   password: string;
+  /** Security question for password reset */
+  securityQuestion?: string;
+  /** Plain-text answer (hashed before storage) */
+  securityAnswer?: string;
 }
 
 // ── Storage keys ──────────────────────────────────────────────────────────────

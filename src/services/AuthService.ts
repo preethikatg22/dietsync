@@ -42,6 +42,9 @@ const AuthRecordSchema = z.object({
   hash: z.string(),
   salt: z.string(),
   userId: z.string(),
+  securityQuestion: z.string().optional(),
+  securityAnswerHash: z.string().optional(),
+  securityAnswerSalt: z.string().optional(),
 });
 
 const AuthStoreSchema = z.record(z.string(), AuthRecordSchema);
@@ -155,10 +158,25 @@ export class AuthService {
       AuthStoreSchema,
       {},
     );
+
+    // Hash the security answer if provided
+    let securityAnswerHash: string | undefined;
+    let securityAnswerSalt: string | undefined;
+    if (profile.securityQuestion && profile.securityAnswer) {
+      securityAnswerSalt = generateSaltHex();
+      securityAnswerHash = await pbkdf2Hash(
+        profile.securityAnswer.toLowerCase().trim(),
+        securityAnswerSalt,
+      );
+    }
+
     const authRecord: AuthRecord = {
       hash: hashHex,
       salt: saltHex,
       userId,
+      securityQuestion: profile.securityQuestion,
+      securityAnswerHash,
+      securityAnswerSalt,
     };
     storageRepository.set(STORAGE_KEYS.AUTH, {
       ...authStore,

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Starter Kit — S3 + Bedrock Nova Pro</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 760px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #1a1a1a;
+        line-height: 1.5;
+      }
+      h1 { font-size: 1.6rem; }
+      .card {
+        border: 1px solid #e2e2e2;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+      h2 { margin-top: 0; font-size: 1.2rem; }
+      button {
+        background: #ff9900;
+        border: none;
+        color: #111;
+        font-weight: 600;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover { background: #e88b00; }
+      input[type="text"], textarea, input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      textarea { min-height: 80px; resize: vertical; }
+      .output {
+        background: #f6f6f6;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 12px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        min-height: 20px;
+      }
+      .muted { color: #666; font-size: 0.9rem; }
+      a { color: #0a7; }
+    </style>
+  </head>
+  <body>
+    <h1>🚀 AWS Starter Kit</h1>
+    <p class="muted">
+      A tiny demo of two AWS services wired into a website:
+      <b>Amazon S3</b> for file storage and <b>Amazon Bedrock (Nova Pro)</b> for AI.
+      Copy these patterns into your own site!
+    </p>
+
+    <!-- ============ FEATURE 1: S3 UPLOAD ============ -->
+    <div class="card">
+      <h2>📦 Amazon S3 — Upload a file</h2>
+      <p class="muted">Pick any file (image, pdf, text) and store it in your S3 bucket.</p>
+      <input type="file" id="fileInput" />
+      <button onclick="uploadFile()">Upload to S3</button>
+      <div class="output" id="uploadOutput"></div>
+    </div>
+
+    <!-- ============ FEATURE 2: BEDROCK AI ============ -->
+    <div class="card">
+      <h2>🤖 Amazon Bedrock Nova Pro — Ask the AI</h2>
+      <p class="muted">Type a question or prompt and let Nova Pro answer.</p>
+      <textarea id="promptInput" placeholder="e.g. Write a catchy tagline for my coffee shop website."></textarea>
+      <button onclick="askAI()">Ask Nova Pro</button>
+      <div class="output" id="aiOutput"></div>
+    </div>
+
+    <script>
+      // ---- S3 upload ----
+      async function uploadFile() {
+        const out = document.getElementById("uploadOutput");
+        const input = document.getElementById("fileInput");
+        if (!input.files.length) {
+          out.textContent = "⚠️ Please choose a file first.";
+          return;
+        }
+        out.textContent = "⏳ Uploading...";
+        const formData = new FormData();
+        formData.append("file", input.files[0]);
+
+        try {
+          const res = await fetch("/api/upload", {
+            method: "POST",
+            body: formData,
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error);
+          out.innerHTML =
+            "✅ Uploaded! <a href='" +
+            data.url +
+            "' target='_blank'>View your file</a><br><span class='muted'>Key: " +
+            data.key +
+            "</span>";
+        } catch (err) {
+          out.textContent = "❌ " + err.message;
+        }
+      }
+
+      // ---- Bedrock AI ----
+      async function askAI() {
+        const out = document.getElementById("aiOutput");
+        const prompt = document.getElementById("promptInput").value.trim();
+        if (!prompt) {
+          out.textContent = "⚠️ Please type a prompt first.";
+          return;
+        }
+        out.textContent = "🤔 Nova Pro is thinking...";
+        try {
+          const res = await fetch("/api/ai", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error);
+          out.textContent = data.text;
+        } catch (err) {
+          out.textContent = "❌ " + err.message;
+        }
+      }
+    </script>
+  </body>
+</html>

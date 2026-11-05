@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Comment": "Least-privilege policy for the AWS Kit (S3 + Bedrock Nova Lite). Replace 'my-unique-student-bucket' with your real bucket name before attaching.",
+  "Statement": [
+    {
+      "Sid": "S3UploadListOwnBucket",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:GetObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::my-unique-student-bucket",
+        "arn:aws:s3:::my-unique-student-bucket/*"
+      ]
+    },
+    {
+      "Sid": "InvokeBedrockNovaLite",
+      "Effect": "Allow",
+      "Action": ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"],
+      "Resource": [
+        "arn:aws:bedrock:*::foundation-model/amazon.nova-lite-v1:0",
+        "arn:aws:bedrock:*:*:inference-profile/us.amazon.nova-lite-v1:0"
+      ]
+    },
+    {
+      "Sid": "WhoAmICheck",
+      "Effect": "Allow",
+      "Action": ["sts:GetCallerIdentity"],
+      "Resource": "*"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "aws-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Smart starter kit: analyzes a student's website and guides adding Amazon S3 + Bedrock (Nova Lite) with Kiro.",
+  "scripts": {
+    "analyze": "node analyze.mjs",
+    "setup": "node setup.mjs",
+    "verify": "node verify.mjs"
+  }
+}

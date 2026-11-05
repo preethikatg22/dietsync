@@ -1,0 +1,20 @@
+{
+  "name": "aws-s3-bedrock-starter-kit",
+  "version": "1.0.0",
+  "description": "Starter kit for students to integrate Amazon S3 (file storage) and Amazon Bedrock Nova Pro (AI) into their websites.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.1156.0",
+    "@aws-sdk/client-s3": "3.1156.0",
+    "@aws-sdk/s3-request-presigner": "3.1156.0",
+    "cors": "2.8.5",
+    "dotenv": "16.4.7",
+    "express": "4.22.3",
+    "multer": "2.5.0"
+  }
+}

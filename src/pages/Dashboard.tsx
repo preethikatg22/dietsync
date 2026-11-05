@@ -9,7 +9,7 @@
 // to configure them (Req 6.7).
 
 import { z } from 'zod';
-import { useLogStore } from '../stores/logStore.ts';
+
 import { useAuthStore } from '../stores/authStore.ts';
 import { aggregateDayLog } from '../services/NutritionCalculator.ts';
 import { storageRepository } from '../repositories/StorageRepository.ts';
@@ -21,6 +21,9 @@ import {
   NoGoalsPrompt,
   WaterTracker,
 } from '../components/dashboard/index.ts';
+import { NutritionCoach } from '../components/dashboard/NutritionCoach.tsx';
+import { CloudSync } from '../components/dashboard/CloudSync.tsx';
+import { useLogStore } from '../stores/logStore.ts';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Schema for reading NutritionGoals from storage
@@ -133,7 +136,33 @@ export function Dashboard() {
 
         {/* Water tracker (Req 14.1, 14.2, 14.4) */}
         <WaterTracker />
+
+        {/* Cloud Sync — save/load data to S3 */}
+        {session?.userId && (
+          <CloudSync
+            userId={session.userId}
+            onDataRestored={() => {
+              // Reload the day log after restoring cloud data
+              useLogStore.getState().loadDayLog(session.userId, activeDate);
+            }}
+          />
+        )}
       </div>
+
+      {/* AI Nutrition Coach — Bedrock Nova Lite (always visible) */}
+      {session?.userId && (
+        <NutritionCoach
+          context={{
+            userName: currentUser?.name,
+            calorieTarget: goals?.calorieTarget,
+            caloriesConsumed: totals.calories,
+            proteinConsumed: totals.protein,
+            carbsConsumed: totals.carbs,
+            fatConsumed: totals.fat,
+            goal: currentUser?.goal,
+          }}
+        />
+      )}
     </main>
   );
 }
