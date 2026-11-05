@@ -3,17 +3,12 @@
 // Requirements: 6.1–6.7
 // ─────────────────────────────────────────────────────────────────────────────
 //
-// Subscribes to `logStore` and `authStore`. Re-renders on every log change
-// without a page reload (Req 6.5). Reads the user's NutritionGoals from
-// LocalStorage via `StorageRepository`. When no goals are set, shows a prompt
-// to configure them (Req 6.7).
-
-import { z } from 'zod';
+// Subscribes to `logStore` and `authStore` via the `useNutritionSummary` hook.
+// Re-renders on every log change without a page reload (Req 6.5).
 
 import { useAuthStore } from '../stores/authStore.ts';
-import { aggregateDayLog } from '../services/NutritionCalculator.ts';
-import { storageRepository } from '../repositories/StorageRepository.ts';
-import { STORAGE_KEYS, type NutritionGoals } from '../types/index.ts';
+import { useLogStore } from '../stores/logStore.ts';
+import { useNutritionSummary } from '../hooks/useNutritionSummary.ts';
 import {
   CalorieProgress,
   MacroRing,
@@ -23,54 +18,25 @@ import {
 } from '../components/dashboard/index.ts';
 import { NutritionCoach } from '../components/dashboard/NutritionCoach.tsx';
 import { CloudSync } from '../components/dashboard/CloudSync.tsx';
-import { useLogStore } from '../stores/logStore.ts';
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Schema for reading NutritionGoals from storage
-// ─────────────────────────────────────────────────────────────────────────────
-
-const NutritionGoalsSchema = z.object({
-  calorieTarget: z.number(),
-  proteinPct: z.number(),
-  carbsPct: z.number(),
-  fatPct: z.number(),
-  isManual: z.boolean(),
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Helper — load goals for the current user
-// ─────────────────────────────────────────────────────────────────────────────
-
-function loadGoals(userId: string): NutritionGoals | null {
-  return storageRepository.get<NutritionGoals | null>(
-    STORAGE_KEYS.GOALS(userId),
-    NutritionGoalsSchema as z.ZodType<NutritionGoals | null>,
-    null,
-  );
-}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Dashboard component
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function Dashboard() {
-  const currentUser = useAuthStore((s) => s.currentUser);
-  const session = useAuthStore((s) => s.session);
   const logout = useAuthStore((s) => s.logout);
-
-  // Subscribe to dayLog so the component re-renders whenever a log entry is
-  // added / edited / removed without a page reload. (Req 6.5)
+  const session = useAuthStore((s) => s.session);
   const dayLog = useLogStore((s) => s.dayLog);
-  const activeDate = useLogStore((s) => s.activeDate);
 
-  // Derive daily totals from all entries (Req 6.6)
-  const entries = dayLog?.entries ?? [];
-  const totals = aggregateDayLog(entries);
-
-  // Load goals from storage — null means not yet configured (Req 6.7)
-  const goals = session?.userId ? loadGoals(session.userId) : null;
-
-  const displayName = currentUser?.name ?? 'there';
+  // All nutrition logic in one hook
+  const {
+    totals,
+    goals,
+    hasGoals,
+    activeDate,
+    displayName,
+    userId,
+  } = useNutritionSummary();
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -106,12 +72,12 @@ export function Dashboard() {
         </div>
 
         {/* No goals configured — prompt (Req 6.7) */}
-        {!goals ? (
+        {!hasGoals ? (
           <NoGoalsPrompt />
         ) : (
           <>
             {/* Calorie progress (Req 6.1, 6.4) */}
-            <CalorieProgress consumed={totals.calories} target={goals.calorieTarget} />
+            <CalorieProgress consumed={totals.calories} target={goals!.calorieTarget} />
 
             {/* Macro ring (Req 6.2) */}
             <MacroRing
@@ -122,11 +88,11 @@ export function Dashboard() {
           </>
         )}
 
-        {/* Meal breakdown — always shown so the user can see their meals (Req 6.3) */}
+        {/* Meal breakdown (Req 6.3) */}
         {dayLog && <MealBreakdown dayLog={dayLog} />}
 
-        {/* Placeholder when no dayLog has been loaded yet */}
-        {!dayLog && goals && (
+        {/* Placeholder when no dayLog loaded yet */}
+        {!dayLog && hasGoals && (
           <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 text-center shadow-sm">
             <p className="text-sm text-gray-400 dark:text-gray-500">
               No food logged for this date yet.
@@ -138,28 +104,27 @@ export function Dashboard() {
         <WaterTracker />
 
         {/* Cloud Sync — save/load data to S3 */}
-        {session?.userId && (
+        {userId && (
           <CloudSync
-            userId={session.userId}
+            userId={userId}
             onDataRestored={() => {
-              // Reload the day log after restoring cloud data
-              useLogStore.getState().loadDayLog(session.userId, activeDate);
+              useLogStore.getState().loadDayLog(userId, activeDate);
             }}
           />
         )}
       </div>
 
-      {/* AI Nutrition Coach — Bedrock Nova Lite (always visible) */}
+      {/* AI Nutrition Coach — Bedrock Nova Lite */}
       {session?.userId && (
         <NutritionCoach
           context={{
-            userName: currentUser?.name,
+            userName: displayName,
             calorieTarget: goals?.calorieTarget,
             caloriesConsumed: totals.calories,
             proteinConsumed: totals.protein,
             carbsConsumed: totals.carbs,
             fatConsumed: totals.fat,
-            goal: currentUser?.goal,
+            goal: goals ? (hasGoals ? 'configured' : undefined) : undefined,
           }}
         />
       )}
@@ -171,11 +136,6 @@ export function Dashboard() {
 // Helpers
 // ─────────────────────────────────────────────────────────────────────────────
 
-/**
- * Format a YYYY-MM-DD date string as a human-readable label.
- * Returns "Today" for today, "Yesterday" for yesterday, otherwise the
- * locale-formatted date.
- */
 function formatDate(dateStr: string): string {
   const today = new Date().toISOString().slice(0, 10);
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
