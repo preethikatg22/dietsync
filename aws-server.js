@@ -38,7 +38,8 @@ app.use('/api/aws', awsRoutes);
 app.get('/api/health', (_req, res) => {
   res.json({
     status: 'ok',
-    region: process.env.AWS_REGION || 'us-east-1',
+    s3Region: process.env.S3_REGION || process.env.AWS_REGION || 'ap-southeast-2',
+    bedrockRegion: process.env.BEDROCK_REGION || 'us-east-1',
     model: process.env.BEDROCK_MODEL_ID || 'amazon.nova-lite-v1:0',
     bucket: process.env.S3_BUCKET_NAME || '(not set)',
   });
