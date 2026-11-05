@@ -112,12 +112,27 @@ interface AuthState {
 }
 
 // ---------------------------------------------------------------------------
+// Eagerly validate the persisted session so the initial store state reflects
+// any session already stored in LocalStorage. This runs synchronously at
+// module load time, which means components that read `session` on first render
+// (e.g. Dashboard's CloudSync / NutritionCoach guards) see the correct value
+// without needing to wait for a useEffect cycle.
+// ---------------------------------------------------------------------------
+
+function getInitialAuthState(): Pick<AuthState, 'session' | 'currentUser'> {
+  const session = authService.validateSession();
+  return {
+    session,
+    currentUser: session ? loadUserProfile(session.userId) : null,
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Store implementation
 // ---------------------------------------------------------------------------
 
 export const useAuthStore = create<AuthState>((set) => ({
-  currentUser: null,
-  session: null,
+  ...getInitialAuthState(),
 
   login: async (email, password) => {
     // AuthService.login creates + persists the 30-day session (Req 2.4) and
