@@ -16,7 +16,7 @@ const S3_REGION = process.env.S3_REGION || process.env.AWS_REGION || 'ap-southea
 const BEDROCK_REGION = process.env.BEDROCK_REGION || 'us-east-1';
 
 const app = express();
-const PORT = process.env.AWS_SERVER_PORT || 3001;
+const PORT = process.env.PORT || process.env.AWS_SERVER_PORT || 3001;
 const isDev = process.env.NODE_ENV !== 'production';
 app.use(cors({
   origin: isDev ? true : [
